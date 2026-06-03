@@ -1,0 +1,91 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 28,
+    "spacing": 4,
+
+    "modules-left": [
+        "sway/workspaces"
+    ],
+
+    "modules-center": [
+        "clock"
+    ],
+
+    "modules-right": [
+        "network",
+        "pulseaudio",
+        "battery",
+        "tray"
+    ],
+
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": false,
+        "format": "{name}"
+    },
+
+    "clock": {
+        "interval": 30,
+        "format": "{:%H:%M}",
+        "tooltip": true,
+        "tooltip-format": "{:%A\n%d %B %Y\n%H:%M:%S %Z}"
+    },
+
+    "network": {
+        "interval": 5,
+
+        "format-wifi": "󰤨 {essid}",
+        "format-ethernet": "󰈀 Ethernet",
+        "format-disconnected": "󰤭 Offline",
+
+        "tooltip-format-wifi": "SSID: {essid}\nSignal: {signalStrength}%\nIP: {ipaddr}\nInterface: {ifname}",
+        "tooltip-format-ethernet": "Interface: {ifname}\nIP: {ipaddr}/{cidr}",
+        "tooltip-format-disconnected": "Disconnected",
+
+        "on-click": "nm-connection-editor"
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "󰝟 Muted",
+
+        "format-icons": {
+            "headphone": "󰋋",
+            "headset": "󰋎",
+            "default": [
+                "󰕿",
+                "󰖀",
+                "󰕾"
+            ]
+        },
+
+        "scroll-step": 5,
+        "on-click": "pavucontrol"
+    },
+
+    "battery": {
+        "states": {
+            "warning": 25,
+            "critical": 10
+        },
+
+        "format": "{icon} {capacity}%",
+        "format-charging": "󰂄 {capacity}%",
+        "format-plugged": "󰚥 {capacity}%",
+
+        "format-icons": [
+            "󰁺",
+            "󰁼",
+            "󰁾",
+            "󰂀",
+            "󰁹"
+        ],
+
+        "tooltip-format": "{capacity}% remaining"
+    },
+
+    "tray": {
+        "spacing": 10
+    }
+}
