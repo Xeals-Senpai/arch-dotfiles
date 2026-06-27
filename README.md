@@ -22,10 +22,6 @@ Personal Arch Linux desktop configuration built around a modern Wayland workflow
 - Zsh shell with autosuggestions, syntax highlighting and Starship prompt
 - Designed to complement the Arch Installer project
 
-## Screenshots
-
-Coming soon.
-
 ## Related Projects
 
 ### Arch Installer
